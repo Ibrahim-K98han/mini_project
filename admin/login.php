@@ -12,7 +12,7 @@
     <title>Student Management System</title>
 </head>
 
-<body>
+<body style="background: #f5f5f5;">
     <div class="container">
         <h1 class="text-center">Student Management System</h1>
         <br>
