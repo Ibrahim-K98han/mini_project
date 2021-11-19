@@ -29,6 +29,7 @@
                     </div>
                     <br>
                     <div>
+                        <span><a href="../index.php">Back</a></span>
                         <input type="submit" style="float: right;" value="Login" name="login" class="btn btn-info pull-right">
                     </div>
                 </form>
