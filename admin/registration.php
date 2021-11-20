@@ -1,5 +1,6 @@
 <?php
 require_once '../admin/dbcon.php';
+session_start();
 
 if (isset($_POST['registration'])) {
     $name = $_POST['name'];
@@ -38,6 +39,16 @@ if (isset($_POST['registration'])) {
                 if (strlen($username) > 7) {
                     if (strlen($password) > 7) {
                         if ($password == $c_password) {
+                            $password = md5($password);
+                            $query = "INSERT INTO `users`(`name`, `email`, `username`, `password`, `photo`, `status`) VALUES ('$name','$email','$username','$password','$photo_name','inactive')";
+                            $result = mysqli_query($link, $query);
+                            if ($result) {
+                                $_SESSION['data_insert_success'] = "Data Insert Success";
+                                move_uploaded_file($_FILES['photo']['tmp_name'], 'images/' . $photo_name);
+                                header('location:registration.php');
+                            } else {
+                                $_SESSION['data_insert_error'] = "Data Insert Error";
+                            }
                         } else {
                             $password_not_match = "Confirm Password Not Match";
                         }
@@ -76,6 +87,16 @@ if (isset($_POST['registration'])) {
 
     <div class="container">
         <h1>User Registeration Form</h1>
+        <?php
+        if (isset($_SESSION['data_insert_success'])) {
+            echo '<div class="alert alert-success">' . $_SESSION['data_insert_success'] . '</div>';
+        }
+        ?>
+        <?php
+        if (isset($_SESSION['data_insert_error'])) {
+            echo '<div class="alert alert-danger">' . $_SESSION['data_insert_error'] . '</div>';
+        }
+        ?>
         <hr>
         <div class="row" style="margin-left: 200px;">
             <div class="col-md-12">
