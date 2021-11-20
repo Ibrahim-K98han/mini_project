@@ -12,7 +12,7 @@
     <title>Student Management System</title>
 </head>
 
-<body style="background: #f5f5f5;">
+<body style="background: url(images/welcome.jpg); background-repeat: no-repeat;background-size: 600px;">
 
     <div class="container">
         <br>

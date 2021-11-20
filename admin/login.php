@@ -1,6 +1,10 @@
 <?php
 require_once './dbcon.php';
 session_start();
+if (isset($_SESSION['user_login'])) {
+    header('location:index.php');
+}
+
 if (isset($_POST['login'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -10,6 +14,7 @@ if (isset($_POST['login'])) {
         $row = mysqli_fetch_assoc($username_check);
         if ($row['password'] == md5($password)) {
             if ($row['status'] == 'active') {
+                $_SESSION['user_login'] = $username;
                 header('location:index.php');
             } else {
                 $status_inactive = "Your Status Inactive.";
