@@ -5,3 +5,11 @@ label{
     font-weight: bold;
     font-size: 15px;
 }
+.footer-area{
+    background: blue;
+    text-align: center;
+    padding: 20px 0px;
+}
+.footer-area p{
+    margin: 0;
+}
