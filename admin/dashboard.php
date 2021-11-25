@@ -1,6 +1,6 @@
-<h1 class="text-primary">Dashboard <small style="color:gray">Statics Overview</small></h1>
+<h1 class="text-primary"> <i class="fas fa-tachometer-alt"></i> Dashboard <small style="color:gray">Statics Overview</small></h1>
 <ol class="breadcrumb bg-light p-2">
-    <li class="active">Dashboard</li>
+    <li class="active"> <i class="fas fa-tachometer-alt"></i> Dashboard</li>
 </ol>
 <div class="row">
     <div class="col-sm-4">
@@ -97,30 +97,24 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>Ibrahim Khan</td>
-                <td>359896</td>
-                <td>Dhaka</td>
-                <td>01751800957</td>
-                <td><img style="width: 80px;" src="../images/user.jpg" alt=""></td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Ibrahim Khan</td>
-                <td>359896</td>
-                <td>Dhaka</td>
-                <td>01751800957</td>
-                <td><img style="width: 80px;" src="../images/user.jpg" alt=""></td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Ibrahim Khan</td>
-                <td>359896</td>
-                <td>Dhaka</td>
-                <td>01751800957</td>
-                <td><img style="width: 80px;" src="../images/user.jpg" alt=""></td>
-            </tr>
+            <?php
+            $db_sinfo = mysqli_query($link, "SELECT * FROM `student_info`");
+            while ($row = mysqli_fetch_assoc($db_sinfo)) { ?>
+
+                <tr>
+                    <td><?php echo $row['id']; ?></td>
+                    <td><?php echo ucwords($row['name']); ?></td>
+                    <td><?php echo $row['roll']; ?></td>
+                    <td><?php echo ucwords($row['city']); ?></td>
+                    <td><?php echo $row['pcontact']; ?></td>
+                    <td><img style="width: 80px;" src="student_images/<?php echo $row['photo']; ?>" alt=""></td>
+                </tr>
+            <?php
+
+            }
+            ?>
         </tbody>
     </table>
 </div>
+
+<script src="https://kit.fontawesome.com/0ae2707536.js" crossorigin="anonymous"></script>

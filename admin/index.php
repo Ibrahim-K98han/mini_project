@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once './dbcon.php';
 if (!isset($_SESSION['user_login'])) {
     header('location:login.php');
 }
@@ -48,11 +49,11 @@ if (!isset($_SESSION['user_login'])) {
             <div class="col-sm-3">
                 <div class="list-group">
                     <a href="index.php?page=dashboard" class="list-group-item list-group-item-action active" aria-current="true">
-                        Dashboard
+                        <i class="fas fa-tachometer-alt"></i> Dashboard
                     </a>
-                    <a href="index.php?page=add-student" class="list-group-item list-group-item-action">Add Student</a>
-                    <a href="index.php?page=all-student" class="list-group-item list-group-item-action">All Student</a>
-                    <a href="index.php?page=all-users" class="list-group-item list-group-item-action">All Users</a>
+                    <a href="index.php?page=add-student" class="list-group-item list-group-item-action"><i class="fas fa-user-plus"></i> Add Student</a>
+                    <a href="index.php?page=all-student" class="list-group-item list-group-item-action"><i class="fas fa-user-graduate"></i> All Student</a>
+                    <a href="index.php?page=all-users" class="list-group-item list-group-item-action"><i class="fas fa-users"></i> All Users</a>
                 </div>
             </div>
             <div class="col-sm-9">
@@ -81,5 +82,8 @@ if (!isset($_SESSION['user_login'])) {
         <p style="margin: 0;">Copyright &copy; 2021 Student Management System. All Right Are Reserved</p>
     </footer>
 </body>
+
+
+<script src="https://kit.fontawesome.com/0ae2707536.js" crossorigin="anonymous"></script>
 
 </html>
