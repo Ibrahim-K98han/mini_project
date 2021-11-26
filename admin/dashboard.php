@@ -8,7 +8,7 @@
             <div class="panel-heading">
                 <div class="row">
                     <div class="col-xs-3">
-                        <img src="../images/user.jpg" alt="">
+                        <i class="fas fa-user-graduate" style="font-size: 80px; color:#fff; margin-left:20px; margin-top:20px;"></i>
                     </div>
                     <div class="col-xs-9">
                         <div class="pull-right">
@@ -34,7 +34,7 @@
             <div class="panel-heading">
                 <div class="row">
                     <div class="col-xs-3">
-                        <img src="../images/user.jpg" alt="">
+                        <i class="fas fa-user-graduate" style="font-size: 80px; color:#fff; margin-left:20px; margin-top:20px;"></i>
                     </div>
                     <div class="col-xs-9">
                         <div class="pull-right">
@@ -60,7 +60,7 @@
             <div class="panel-heading">
                 <div class="row">
                     <div class="col-xs-3">
-                        <img src="../images/user.jpg" alt="">
+                        <i class="fas fa-user-graduate" style="font-size: 80px; color:#fff; margin-left:20px; margin-top:20px;"></i>
                     </div>
                     <div class="col-xs-9">
                         <div class="pull-right">
