@@ -2,17 +2,29 @@
 <ol class="breadcrumb bg-light p-2">
     <li class="active"> <i class="fas fa-tachometer-alt"></i> Dashboard</li>
 </ol>
+
+<?php
+$count_student = mysqli_query($link, "SELECT * FROM `student_info`");
+$total_student = mysqli_num_rows($count_student);
+
+$count_users = mysqli_query($link, "SELECT * FROM `users`");
+$total_users = mysqli_num_rows($count_users);
+
+
+
+?>
+
 <div class="row">
     <div class="col-sm-4">
         <div class="bg-primary">
             <div class="panel-heading">
                 <div class="row">
                     <div class="col-xs-3">
-                        <i class="fas fa-user-graduate" style="font-size: 80px; color:#fff; margin-left:20px; margin-top:20px;"></i>
+                        <i class="fa fa-user fa-5x" style="color: #fff; margin-left: 20px; margin-top:20px;"></i>
                     </div>
                     <div class="col-xs-9">
                         <div class="pull-right">
-                            <h2 style="font-size: 45px; color:#fff; margin-left:200px;">10</h2>
+                            <h2 style="font-size: 45px; color:#fff; margin-left:200px;"><?= $total_student ?></h2>
                         </div>
                         <div class="pull-right">
                             <p style="margin-left: 200px; color:#fff;"> All Student</p>
@@ -22,7 +34,7 @@
             </div>
 
         </div>
-        <a href="" style="text-decoration: none;">
+        <a href="index.php?page=all-student" style="text-decoration: none;">
             <div class="panel-footer" style="border: 1px solid blue; padding:10px;">
                 <span class="pull-left">All Student</span>
                 <span class="pull-right"><i class="fa fa-arrow-cirlce-o-right"></i> </span>
@@ -34,53 +46,28 @@
             <div class="panel-heading">
                 <div class="row">
                     <div class="col-xs-3">
-                        <i class="fas fa-user-graduate" style="font-size: 80px; color:#fff; margin-left:20px; margin-top:20px;"></i>
+                        <i class="fa fa-user fa-5x" style="color: #fff; margin-left: 20px; margin-top:20px;"></i>
                     </div>
                     <div class="col-xs-9">
                         <div class="pull-right">
-                            <h2 style="font-size: 45px; color:#fff; margin-left:200px;">10</h2>
+                            <h2 style="font-size: 45px; color:#fff; margin-left:200px;"><?= $total_users ?></h2>
                         </div>
                         <div class="pull-right">
-                            <p style="margin-left: 200px; color:#fff;"> All Student</p>
+                            <p style="margin-left: 200px; color:#fff;"> All Users</p>
                         </div>
                     </div>
                 </div>
             </div>
 
         </div>
-        <a href="" style="text-decoration: none;">
+        <a href="index.php?page=all-users" style="text-decoration: none;">
             <div class="panel-footer" style="border: 1px solid blue; padding:10px;">
-                <span class="pull-left">All Student</span>
+                <span class="pull-left">All Users</span>
                 <span class="pull-right"><i class="fa fa-arrow-cirlce-o-right"></i> </span>
             </div>
         </a>
     </div>
-    <div class="col-sm-4">
-        <div class="bg-primary">
-            <div class="panel-heading">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <i class="fas fa-user-graduate" style="font-size: 80px; color:#fff; margin-left:20px; margin-top:20px;"></i>
-                    </div>
-                    <div class="col-xs-9">
-                        <div class="pull-right">
-                            <h2 style="font-size: 45px; color:#fff; margin-left:200px;">10</h2>
-                        </div>
-                        <div class="pull-right">
-                            <p style="margin-left: 200px; color:#fff;"> All Student</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-        </div>
-        <a href="" style="text-decoration: none;">
-            <div class="panel-footer" style="border: 1px solid blue; padding:10px;">
-                <span class="pull-left">All Student</span>
-                <span class="pull-right"><i class="fa fa-arrow-cirlce-o-right"></i> </span>
-            </div>
-        </a>
-    </div>
 </div>
 <hr>
 <h3>New Students</h3>
