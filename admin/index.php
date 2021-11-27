@@ -37,7 +37,7 @@ if (!isset($_SESSION['user_login'])) {
                 <ul class="nav navbar-right col-sm-5">
                     <li><a style="text-decoration:none; color:gray" href="logout.php"><i class="fa fa-user"></i> Welcome: Ibrahim Khan</a></li>
                     <li style="margin-left: 20px;"><a style="text-decoration:none; color:gray" href="logout.php"><i class="fa fa-user-plus"></i> Add User</a></li>
-                    <li style="margin-left: 20px;"><a style="text-decoration:none; color:gray" href="logout.php"><i class="fa fa-user"></i> Profile</a></li>
+                    <li style="margin-left: 20px;"><a style="text-decoration:none; color:gray" href="index.php?page=user-profile"><i class="fa fa-user"></i> Profile</a></li>
                     <li style="margin-left: 20px;"><a style="text-decoration:none; color:gray" href="logout.php"><i class="fa fa-power-off"></i> Logout</a></li>
                 </ul>
             </div>
